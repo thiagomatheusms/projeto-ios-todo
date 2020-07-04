@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="login_app" customModuleProvider="target">
+            <connections>
+                <outlet property="dateTodo" destination="2lo-GJ-0tL" id="cNg-NP-a1w"/>
+                <outlet property="textFieldContent" destination="RKw-DF-kVg" id="w8c-11-N5e"/>
+                <outlet property="textFieldTodo" destination="6Lj-e2-tIc" id="mrr-tt-34X"/>
+                <outlet property="textTitle" destination="ehi-ey-9zF" id="dVf-41-BZK"/>
+                <outlet property="view" destination="2xm-dK-iae" id="6lo-fQ-DLh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2xm-dK-iae">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tarefa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-e2-tIc">
+                    <rect key="frame" x="48" y="180.5" width="318" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="o6w-7f-CJe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKw-DF-kVg">
+                    <rect key="frame" x="48" y="244.5" width="318" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7EP-5y-D6j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual tarefa deseja cadastrar?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-ey-9zF">
+                    <rect key="frame" x="16" y="68" width="382" height="76.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="2lo-GJ-0tL">
+                    <rect key="frame" x="0.0" y="360.5" width="414" height="216"/>
+                    <locale key="locale" localeIdentifier="pt_BR"/>
+                    <connections>
+                        <action selector="datePickerChanged:" destination="-1" eventType="valueChanged" id="LhK-3n-3l7"/>
+                    </connections>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WN-oz-Fz7">
+                    <rect key="frame" x="48" y="624.5" width="318" height="30"/>
+                    <color key="backgroundColor" name="primaryColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Salvar"/>
+                    <connections>
+                        <action selector="saveButtonPressed:" destination="-1" eventType="touchUpInside" id="Zuj-46-usL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ehi-ey-9zF" firstAttribute="leading" secondItem="2xm-dK-iae" secondAttribute="leading" constant="16" id="BJr-Ll-OaC"/>
+                <constraint firstItem="2lo-GJ-0tL" firstAttribute="top" secondItem="RKw-DF-kVg" secondAttribute="bottom" constant="16" id="BVL-xW-Jez"/>
+                <constraint firstAttribute="trailing" secondItem="ehi-ey-9zF" secondAttribute="trailing" constant="16" id="Bqw-g3-FNI"/>
+                <constraint firstItem="RKw-DF-kVg" firstAttribute="leading" secondItem="6Lj-e2-tIc" secondAttribute="leading" id="CF9-cO-ugD"/>
+                <constraint firstItem="RKw-DF-kVg" firstAttribute="top" secondItem="6Lj-e2-tIc" secondAttribute="bottom" constant="16" id="GRn-hr-L0c"/>
+                <constraint firstItem="2lo-GJ-0tL" firstAttribute="height" secondItem="RKw-DF-kVg" secondAttribute="height" multiplier="2.16" id="LCk-cG-vma"/>
+                <constraint firstItem="RKw-DF-kVg" firstAttribute="trailing" secondItem="6Lj-e2-tIc" secondAttribute="trailing" id="Ohc-sd-Ro9"/>
+                <constraint firstItem="1WN-oz-Fz7" firstAttribute="top" secondItem="2lo-GJ-0tL" secondAttribute="bottom" constant="48" id="PcQ-HS-C2c"/>
+                <constraint firstItem="RKw-DF-kVg" firstAttribute="width" secondItem="6Lj-e2-tIc" secondAttribute="width" id="W0d-bK-YfR"/>
+                <constraint firstItem="2lo-GJ-0tL" firstAttribute="width" secondItem="RKw-DF-kVg" secondAttribute="width" multiplier="1.30189" id="Wne-8w-YXZ"/>
+                <constraint firstItem="2MQ-sy-e8f" firstAttribute="trailing" secondItem="6Lj-e2-tIc" secondAttribute="trailing" constant="48" id="XrT-8t-vBN"/>
+                <constraint firstItem="1WN-oz-Fz7" firstAttribute="leading" secondItem="2MQ-sy-e8f" secondAttribute="leading" constant="48" id="fZf-NO-0sq"/>
+                <constraint firstItem="2lo-GJ-0tL" firstAttribute="leading" secondItem="2MQ-sy-e8f" secondAttribute="leading" id="h2z-8o-WUC"/>
+                <constraint firstItem="ehi-ey-9zF" firstAttribute="top" secondItem="2MQ-sy-e8f" secondAttribute="top" constant="24" id="jei-Vl-QZF"/>
+                <constraint firstItem="6Lj-e2-tIc" firstAttribute="top" secondItem="ehi-ey-9zF" secondAttribute="bottom" constant="36" id="lge-Ta-17W"/>
+                <constraint firstItem="6Lj-e2-tIc" firstAttribute="leading" secondItem="2MQ-sy-e8f" secondAttribute="leading" constant="48" id="sju-iW-fxe"/>
+                <constraint firstItem="2MQ-sy-e8f" firstAttribute="trailing" secondItem="1WN-oz-Fz7" secondAttribute="trailing" constant="48" id="wmc-MA-li2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2MQ-sy-e8f"/>
+            <point key="canvasLocation" x="384" y="46"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryColor">
+            <color red="0.11764705882352941" green="0.56470588235294117" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
